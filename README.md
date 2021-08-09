@@ -1,5 +1,6 @@
 # gRPC-Example
 Following is a practise project for gRPC and Protocol Buffers in dart language.
+==> Source code can be found in master branch.
 
 If you are pulling this repository, make sure you need a proto compiler installed in your sysrtem.
 In this practise project, a seerver on local host with local port is coded and then data is fetched in binary systems using gRPC architechture. 
