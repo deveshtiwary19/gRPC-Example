@@ -1,0 +1,29 @@
+ 
+syntax = "proto3";
+
+message Album {
+  int32 id = 1; // type, name, number (1 - 15)
+  string title = 2;
+
+  repeated Photo photo=3;
+}
+
+message Photo {
+  int32 albumId = 1;
+  int32 id = 2;
+  string title = 3;
+  string url = 4;
+}
+
+service AlbumService{
+  rpc getAlbums(AlbumRequest) returns (AlbumResponse){}
+  rpc getAlbumsWithPhotos(AlbumRequest) returns (AlbumResponse){}
+}
+
+message AlbumRequest{
+  int32 id=1;
+}
+
+message AlbumResponse{
+  repeated Album albums=1;
+}
